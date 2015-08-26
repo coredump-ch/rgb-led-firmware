@@ -20,6 +20,19 @@ If you want to see a very simple effect for reference, take a look at
 
 In case you add new effects, pull requests are welcome!
 
+## Building / Flashing
+
+If you want to use `Make` and the provided arduino-makefile, do this:
+
+    git submodule init
+    git submodule update
+    make
+    make upload
+
+If you want to use the Arduino IDE instead, simply open all file in the `src`
+directory, and flash the `src.ino` file to the Arduino. See
+https://www.arduino.cc/en/Guide/HomePage for more information.
+
 ## License
 
 MIT License.
