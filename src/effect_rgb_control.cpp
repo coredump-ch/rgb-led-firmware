@@ -28,6 +28,8 @@
 // Get pin definitions
 #include "pins.h"
 
+int unten_ab(int i);
+
 // Main loop
 void effect_rgb_control(void) {
     
@@ -36,6 +38,10 @@ void effect_rgb_control(void) {
     int val_g = analogRead(POT_2)/4;
     int val_b = analogRead(POT_3)/4;
 
+    val_r = unten_ab(val_r);
+    val_g = unten_ab(val_g);
+    val_b = unten_ab(val_b);
+
     // Set colors
     analogWrite(LED_R, 255-val_r);
     analogWrite(LED_G, 255-val_g);
@@ -43,5 +49,13 @@ void effect_rgb_control(void) {
 
     // Sleep
     delay(1);
+}
+
+// Schneide unten den Bereich ab
+int unten_ab(int i) {
+  if (i < 5) {
+    return 0;
+  }
+  return i;
 }
 
