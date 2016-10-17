@@ -32,6 +32,7 @@
 #include "effect_blue_sin.h"
 #include "effect_sinus_runner.h"
 #include "effect_colour_time.h"
+#include "effect_candle.h"
 
 
 // List of available effects
@@ -42,10 +43,11 @@ enum Effect {
     BlueSinus,
     SinusRunner,
     ColourTime,
+    Candle,
 };
 
 // Choose your effect
-static const Effect effect = ColourTime;
+static const Effect effect = Colorwheel;
 
 
 // Initialize GPIO pins
@@ -59,6 +61,8 @@ void setup() {
     pinMode(POT_1, INPUT);
     pinMode(POT_2, INPUT);
     pinMode(POT_3, INPUT);
+
+    randomSeed(analogRead(POT_1));
 }
 
 
@@ -83,6 +87,9 @@ void loop() {
             break;
         case ColourTime:
             effect_colour_time();
+            break;
+        case Candle:
+            effect_candle();
             break;
     }
 
