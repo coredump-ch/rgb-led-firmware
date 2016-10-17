@@ -1,0 +1,11 @@
+env:
+  - ARDUINO=1.6.12
+before_script:
+  - wget http://downloads.arduino.cc/arduino-$ARDUINO-linux64.tar.xz
+  - tar xf arduino-$ARDUINO-linux64.tar.xz
+script:
+  - arduino-$ARDUINO/arduino-builder -hardware arduino-$ARDUINO/hardware -tools arduino-$ARDUINO/tools-builder -tools arduino-$ARDUINO/hardware/tools/avr -fqbn arduino:avr:nano:cpu=atmega328 -warnings all -verbose src/src.ino
+notifications:
+  email:
+    on_success: change
+    on_failure: change
