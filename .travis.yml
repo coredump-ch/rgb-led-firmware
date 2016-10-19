@@ -1,6 +1,6 @@
 language: generic
 env:
-  - ARDUINO=1.6.12
+  - ARDUINO=1.6.12 CPU=atmega328
 before_script:
   - wget http://downloads.arduino.cc/arduino-$ARDUINO-linux64.tar.xz
   - tar xf arduino-$ARDUINO-linux64.tar.xz
@@ -9,7 +9,7 @@ script:
      -hardware arduino-$ARDUINO/hardware
      -tools arduino-$ARDUINO/tools-builder
      -tools arduino-$ARDUINO/hardware/tools/avr
-     -fqbn arduino:avr:nano:cpu=atmega328
+     -fqbn arduino:avr:nano:cpu=$CPU
      -warnings all
      -verbose src/src.ino
 notifications:
