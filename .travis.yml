@@ -7,5 +7,5 @@ script:
   - arduino-$ARDUINO/arduino-builder -hardware arduino-$ARDUINO/hardware -tools arduino-$ARDUINO/tools-builder -tools arduino-$ARDUINO/hardware/tools/avr -fqbn arduino:avr:nano:cpu=atmega328 -warnings all -verbose src/src.ino
 notifications:
   email:
-    on_success: change
+    on_success: never
     on_failure: change
