@@ -1,3 +1,4 @@
+[![Travis](https://img.shields.io/travis/coredump-ch/rgb-led-firmware/master.svg)](https://travis-ci.org/coredump-ch/rgb-led-firmware )
 # RGB LED Board - Firmware
 
 This is the firmware for the RGB LED project. You can also find it on
@@ -37,5 +38,5 @@ If you want to use `Make` and the provided arduino-makefile instead, do this:
 
 MIT License.
 
-[0]: https://github.com/coredump-ch/rgb-led 
+[0]: https://github.com/coredump-ch/rgb-led
 [1]: https://www.hackster.io/2460/arduino-controlled-rgb-led-strip
