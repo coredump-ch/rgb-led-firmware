@@ -45,7 +45,7 @@ enum Effect {
 };
 
 // Choose your effect
-static const Effect effect = ColourTime;
+static const Effect effect = HSIControl;
 
 
 // Initialize GPIO pins
