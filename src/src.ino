@@ -31,6 +31,7 @@
 #include "effect_hsi_control.h"
 #include "effect_blue_sin.h"
 #include "effect_sinus_runner.h"
+#include "effect_sinus_runner2.h"
 #include "effect_colour_time.h"
 
 
@@ -41,11 +42,12 @@ enum Effect {
     HSIControl,
     BlueSinus,
     SinusRunner,
+    SinusRunner2,
     ColourTime,
 };
 
 // Choose your effect
-static const Effect effect = HSIControl;
+static const Effect effect = SinusRunner2;
 
 
 // Initialize GPIO pins
@@ -80,6 +82,9 @@ void loop() {
             break;
         case SinusRunner:
             effect_sinus_runner();
+            break;
+        case SinusRunner2:
+            effect_sinus_runner2();
             break;
         case ColourTime:
             effect_colour_time();
