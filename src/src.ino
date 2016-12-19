@@ -1,7 +1,7 @@
 /**
  * Main entry point for RGB LED controller.
  *
- * Copyright (c) 2014--2015 Coredump Rapperswil
+ * Copyright (c) 2014--2016 Coredump Rapperswil
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the “Software”), to
@@ -47,7 +47,7 @@ enum Effect {
 };
 
 // Choose your effect
-static const Effect effect = SinusRunner2;
+static const Effect effect = HSIControl;
 
 
 // Initialize GPIO pins

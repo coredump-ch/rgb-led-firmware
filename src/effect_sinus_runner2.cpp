@@ -1,7 +1,9 @@
 /**
- * Effect: Controllable RGB values
+ * Effect: Sinus Runner 2.
  *
- * Copyright (c) 2014--2015 Coredump Rapperswil
+ * Every color is changed by SIN. But phase between sinusoids is adjustable.
+ *
+ * Copyright (c) 2014--2016 Coredump Rapperswil
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the “Software”), to
